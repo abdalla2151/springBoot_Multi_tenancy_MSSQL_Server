@@ -1,0 +1,36 @@
+
+server.port={{ server.port }}
+
+spring.jpa.hibernate.ddl-auto=update
+##########################################################
+# SQL Server Connection
+spring.datasource.url={{ spring.datasource.url }}
+spring.datasource.username={{ spring.datasource.username }}
+spring.datasource.password={{ spring.datasource.password }}
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+
+#hibernate config
+spring.jpa.database-platform=org.hibernate.dialect.SQLServer2012Dialect
+##########################################################
+
+# HikariCP settings
+# spring.datasource.hikari.*
+
+spring.datasource.hikari.connection-timeout=60000
+spring.datasource.hikari.maximum-pool-size=5
+########################################################
+# Keycloak Basic Configuration
+service_base_url={{ service_base_url }}
+################
+# Cross Origin Parameters
+settings.cors_origin={{ settings.cors_origin }}
+
+settings.cors_origin.public={{ settings.cors_origin.public }}
+settings.cors_origin.business={{ settings.cors_origin.business }}
+
+################################################################
+# Business Error Code
+error.code.business=300
+##########################################################
+tax.payment.api.url={{ tax_payment_api_url }}
